@@ -115,7 +115,7 @@ test("user story test_04", async ({ page, baseURL }) => {
   await specialHomePage.addThirdProduct();
 
   // Проверка на избраната стойноста
-  await specialHomePage.checkValue("$93.20");
+  await specialHomePage.checkValue("$76.00");
 
   // Клик върху бутона за преглед на количката
   await addToCardPage.clickToCartBtn();

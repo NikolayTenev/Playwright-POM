@@ -10,12 +10,12 @@ export default class SpecialHomePage {
     await elementHandle.scrollIntoViewIfNeeded(); // Скролва до елемента, ако е необходимо
     await this.page.hover("//*[@id='entry_213244']/a/div", { strict: false }); // Премества курсора върху елемента
     await this.page.click("//*[@id='entry_213244']/a/div"); // Кликва върху елемента
+  
   }
   // Метод за добавяне на първия продукт в количката
   async addFirstProductOnTheCart() {
     await this.page.hover("//*[@id='mz-product-grid-image-32-212439']");
-    // await this.page.hover("//div[@class='image']/a", { strict: false }); // Премества курсора върху изображението на продукта
-    await this.page.locator("(//button[@title='Add to Cart'])").nth(0).click(); // Кликва върху първия бутон "Add to Cart"
+    await this.page.locator("//*[@class='btn btn-cart cart-32']").click(); // Кликва върху първия бутон "Add to Cart"
   }
 
   async addSecondProductOnTheCart() {
