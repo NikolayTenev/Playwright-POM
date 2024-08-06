@@ -10,6 +10,6 @@ export default class HomePage {
 
   // Метод за избор на продуктова група
   async selectProductGroup() {
-    await this.page.click("#entry_213243");
+    await this.page.click("#entry_217931");
   }
 }

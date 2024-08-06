@@ -6,11 +6,8 @@ export default class SpecialHomePage {
   constructor(public page: Page) {}
 
   async openProductPage() {
-    const elementHandle = this.page.locator("//*[@id='entry_213244']/a/div");
-    await elementHandle.scrollIntoViewIfNeeded(); // Скролва до елемента, ако е необходимо
-    await this.page.hover("//*[@id='entry_213244']/a/div", { strict: false }); // Премества курсора върху елемента
-    await this.page.click("//*[@id='entry_213244']/a/div"); // Кликва върху елемента
-  
+    const elementHandle = this.page.locator("a[title='Lumix S Series From Panasonic']").click();
+    
   }
   // Метод за добавяне на първия продукт в количката
   async addFirstProductOnTheCart() {
